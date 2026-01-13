@@ -1,58 +1,74 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
 
 function Header() {
+  const [open, setOpen] = useState(false)
+
   return (
-    <header
-      className="
-        fixed top-0 left-0 w-full z-50
-        bg-gradient-to-r from-orange-400 to-gray-200
-        h-16
-        flex items-center justify-between
-        px-4 md:px-8
-        shadow-md
-      "
-    >
-      {/* Branding */}
-      <div className="flex flex-col leading-tight">
-        <h1 className="text-xl md:text-2xl font-bold tracking-widest">
-          WARYS
-        </h1>
-        <p className="hidden sm:block text-xs md:text-sm text-gray-700">
-          Reparación de calzado y artículos de piel
-        </p>
-      </div>
+    <>
+      {/* HEADER */}
+      <header
+        className="
+          fixed top-0 left-0 w-full z-50
+          bg-linear-to-b from-orange-400 to-gray-200
+          h-16
+          flex items-center justify-between
+          px-4 md:px-8
+          shadow-md
+        "
+      >
+        {/* Branding */}
+        <div className="flex flex-col leading-tight">
+          <Link to="/"><h1 className="text-xl md:text-2xl font-bold tracking-widest">WARYS</h1></Link>
+          <p className="hidden sm:block text-xs md:text-sm text-gray-700">
+            Reparación de calzado y artículos de piel
+          </p>
+        </div>
 
-      {/* Navegación */}
-      <nav className="flex gap-6 items-center font-semibold">
-        <Link
-          to="/"
-          className="text-gray-900 hover:text-white transition"
-        >
-          Inicio
-        </Link>
+        {/* NAV DESKTOP */}
+        <nav className="hidden md:flex gap-6 font-semibold">
+          <Link to="/" className="hover:text-white transition">Inicio</Link>
+          <Link to="/about" className="hover:text-white transition">Quiénes somos</Link>
+          <Link to="/services" className="hover:text-white transition">Servicios</Link>
+          <Link to="/contact" className="hover:text-white transition">Contacto</Link>
+        </nav>
 
-        <Link
-          to="/about"
-          className="text-gray-900 hover:text-white transition"
+        {/* BOTÓN MÓVIL */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-2xl font-bold"
         >
-          Quiénes somos
-        </Link>
+          ☰
+        </button>
+      </header>
 
-        <Link
-          to="/services"
-          className="text-gray-900 hover:text-white transition"
+      {/* MENÚ MÓVIL */}
+      {open && (
+        <div
+          className="
+            fixed inset-0 z-40
+            bg-black/50
+            md:hidden
+          "
+          onClick={() => setOpen(false)}
         >
-          Servicios
-        </Link>
-
-        <Link
-          to="/contact"
-          className="text-gray-900 hover:text-white transition"
-        >
-          Contacto
-        </Link>
-      </nav>
-    </header>
+          <aside
+            className="
+              bg-white w-64 h-full p-6
+              shadow-lg
+            "
+            onClick={(e) => e.stopPropagation()}
+          >
+            <nav className="flex flex-col gap-4 font-semibold text-lg">
+              <Link onClick={() => setOpen(false)} to="/">Inicio</Link>
+              <Link onClick={() => setOpen(false)} to="/about">Quiénes somos</Link>
+              <Link onClick={() => setOpen(false)} to="/services">Servicios</Link>
+              <Link onClick={() => setOpen(false)} to="/contact">Contacto</Link>
+            </nav>
+          </aside>
+        </div>
+      )}
+    </>
   )
 }
 
