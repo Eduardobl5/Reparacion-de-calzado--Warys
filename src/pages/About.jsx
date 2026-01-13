@@ -2,12 +2,14 @@ import React from 'react'
 
 function About() {
   return (
-    <section className="bg-gray-100 py-16 px-6">
+    <section className="bg-gray-100 py-12 md:py-16 px-4 md:px-6">
+
       <div className="max-w-6xl mx-auto">
 
         {/* TÍTULO */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+
             Quiénes somos
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -16,7 +18,8 @@ function About() {
         </div>
 
         {/* HISTORIA */}
-        <div className="bg-white rounded-lg shadow-md p-8 mb-12">
+        <div className="bg-white rounded-lg shadow-md p-6 md:p-8 mb-12">
+
           <p className="text-gray-700 leading-relaxed mb-4">
             <strong>Warys</strong> es un taller de reparación de calzado y artículos de piel
             con una historia que nace del trabajo, la constancia y el amor por un oficio
@@ -46,6 +49,7 @@ function About() {
 
         {/* VALORES */}
         <div className="grid gap-6 md:grid-cols-3 mb-12">
+
           <div className="bg-white p-6 rounded-lg shadow text-center">
             <h3 className="text-xl font-semibold mb-2 text-gray-800">
               Calidad
@@ -74,28 +78,29 @@ function About() {
           </div>
 
           <div className="bg-white p-6 rounded-lg shadow text-center">
-            <img src="https://media.gq.com.mx/photos/5d47b3470728790008e13a4d/master/w_1600%2Cc_limit/GettyImages-1023542632.jpg" alt="Calidad" />
+            <img src="https://media.gq.com.mx/photos/5d47b3470728790008e13a4d/master/w_1600%2Cc_limit/GettyImages-1023542632.jpg" alt="Calidad" 
+            className="w-full h-48 object-cover rounded"/>
           </div>
           <div className="bg-white p-6 rounded-lg shadow text-center">
             <img src="https://tse3.mm.bing.net/th/id/OIP.6CwuMQ9XR67kVPwsCZOi7gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="precio" 
-              className='w-full h-full'
+              className="w-full h-48 object-cover rounded"
               />
           </div>
           <div className="bg-white p-6 rounded-lg shadow text-center">
-            <img src="https://cdn.pixabay.com/photo/2018/07/17/14/54/shoe-repair-3544334_1280.jpg" alt="tradicion" />
+            <img src="https://cdn.pixabay.com/photo/2018/07/17/14/54/shoe-repair-3544334_1280.jpg" alt="tradicion" 
+            className="w-full h-48 object-cover rounded" />
           </div>
         </div>
 
         {/* SERVICIOS DESTACADOS */}
-        <div className="bg-gray-900 text-white rounded-lg p-8">
+        <div className="bg-gray-900 text-white rounded-lg p-6 md:p-8">
           <h2 className="text-2xl font-bold mb-4 text-center">
             Nuestro trabajo
           </h2>
 
           <p className="text-gray-300 text-center max-w-3xl mx-auto">
             Reparación de calzado y artículos de piel, cambio de suelas, parches,
-            cierres, tapas, tacones, pintado y cambio de color, hormado de zapatos
-            y lavado de tenis, todo realizado por manos especialistas.
+            cierres, tapas, tacones, pintado, hormado y lavado de tenis.
           </p>
         </div>
 

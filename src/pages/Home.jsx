@@ -9,7 +9,7 @@ function Home() {
 
       {/* HERO */}
       <section
-        className="relative h-[70vh] flex items-center justify-center text-white"
+        className="relative min-h-[80vh] flex items-center justify-center text-white"
         style={{
           backgroundImage: "url('/ImagenWarys.jpg')",
           backgroundSize: 'cover',
@@ -24,22 +24,26 @@ function Home() {
           
           {/* WARYS gigante */}
           <h1 className="
-            text-7xl md:text-9xl 
+            text-5xl 
+            sm:text-6xl 
+            md:text-8xl 
             font-serif 
-            tracking-[0.3em]
+            tracking-[0.15em] 
+            sm:tracking-[0.25em]
             mb-6
           ">
             WARYS
           </h1>
 
           {/* Subtítulo */}
-          <h2 className="text-2xl md:text-4xl font-semibold mb-4">
+          <h2 className="text-lg sm:text-2xl md:text-4xl font-semibold mb-4">
             Reparación de calzado y artículos de piel
           </h2>
 
-          <p className="text-lg mb-8 text-gray-200">
+          <p className="text-sm sm:text-lg mb-8 text-gray-200">
             Más de 20 años ofreciendo calidad, tradición y precio justo.
           </p>
+
 
           <button
             onClick={() => navigate('/services')}
@@ -53,9 +57,11 @@ function Home() {
 
 
       {/* HISTORIA */}
-      <section className=" py-16 px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4">Nuestra historia</h2>
-        <p className="text-white ">
+      <section className="py-16 px-6 max-w-3xl mx-auto text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+          Nuestra historia
+        </h2>
+        <p className="text-sm sm:text-base text-white leading-relaxed">
           Warys es un taller de reparación de calzado y artículos de piel con raíces en el barrio.
           Desde 1999 trabajamos con técnicas tradicionales, manteniendo la esencia del oficio
           y adaptándonos a las nuevas necesidades.
@@ -64,11 +70,11 @@ function Home() {
 
       {/* SERVICIOS */}
       <section className="bg-linear-to-b from-gray-700 to-gray-400 py-16 px-6">
-        <h2 className="text-3xl font-bold text-center mb-10">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-10">
           Servicios destacados
         </h2>
 
-        <div className="grid gap-6 max-w-6xl mx-auto md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
             'Cambio de suelas',
             'Reparación de cierres',
@@ -91,7 +97,7 @@ function Home() {
       <section className=" py-16 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">¿Por qué elegirnos?</h2>
 
-        <div className="grid gap-6 md:grid-cols-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm sm:text-base">
           <div>🛠 +20 años de experiencia</div>
           <div>👞 Trabajo artesanal</div>
           <div>💰 Precio justo</div>
@@ -101,7 +107,7 @@ function Home() {
 
       {/* CTA */}
       <section className="bg-linear-to-b from-orange-500 to-gray-400 text-black py-14 text-center">
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-xl sm:text-2xl font-bold mb-4">
           Dale nueva vida a tu calzado
         </h2>
         <button

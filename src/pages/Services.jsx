@@ -1,20 +1,21 @@
 function Services() {
   return (
-    <div className="bg-gray-100 py-16 px-6">
+    <div className="bg-gray-100 py-12 md:py-16 px-4 md:px-6">
 
       {/* Título */}
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">Nuestros servicios</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          Nuestros servicios</h1>
         <p className="text-gray-600">
           Reparación especializada en calzado y artículos de piel, con técnicas tradicionales y acabados de calidad.
         </p>
       </div>
 
       {/* Grid de servicios */}
-      <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
         {/* Reparación de calzado */}
-        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition flex flex-col">
           <h2 className="text-2xl font-bold mb-3 text-orange-600">
             Reparación de calzado
           </h2>
@@ -27,7 +28,8 @@ function Services() {
         </div>
 
         {/* Bolsas */}
-        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition flex flex-col">
+
           <h2 className="text-2xl font-bold mb-3 text-orange-600">
             Bolsas de dama
           </h2>
@@ -40,7 +42,8 @@ function Services() {
         </div>
 
         {/* Mochilas */}
-        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition flex flex-col">
+
           <h2 className="text-2xl font-bold mb-3 text-orange-600">
             Mochilas
           </h2>
@@ -52,7 +55,8 @@ function Services() {
         </div>
 
         {/* Chamarras */}
-        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition flex flex-col">
+
           <h2 className="text-2xl font-bold mb-3 text-orange-600">
             Chamarras de piel
           </h2>
@@ -64,7 +68,8 @@ function Services() {
         </div>
 
         {/* Tacones */}
-        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition flex flex-col">
+
           <h2 className="text-2xl font-bold mb-3 text-orange-600">
             Tacones
           </h2>
@@ -77,7 +82,8 @@ function Services() {
         </div>
 
         {/* Lavado de tenis */}
-        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition flex flex-col">
+
           <h2 className="text-2xl font-bold mb-3 text-orange-600">
             Lavado de tenis
           </h2>
@@ -91,9 +97,10 @@ function Services() {
       </div>
 
       {/* Nota final */}
-      <div className="max-w-4xl mx-auto text-center mt-12">
+      <div className="max-w-4xl mx-auto text-center mt-10 md:mt-12">
         <p className="text-gray-600 italic">
-          Estos servicios y más son realizados por manos expertas, cuidando cada detalle y ofreciendo siempre un precio justo.
+          Estos servicios y más son realizados por manos expertas, cuidando cada detalle
+          y ofreciendo siempre un precio justo.
         </p>
       </div>
 
